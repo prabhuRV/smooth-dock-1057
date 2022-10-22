@@ -46,7 +46,12 @@ All the images and links are used from the original website to get a better expe
 <img src="https://cdn-images-1.medium.com/max/800/1*UNx1tI51MUCN_iiIIpDgCw.png"/><hr>
 <h4>Dashboard Page</h4>
 <img src="https://cdn-images-1.medium.com/max/800/1*j9BRgvfOvnN8N4BlV1sUEA.jpeg"/><hr>
-
+<h4>Projects and Task Page</h4>
+<img src="https://i.imgur.com/8cR1mUe.png"/><hr>
+<h4>Time and Calander Page</h4>
+<img src="https://imgur.com/CvRQIFN.png"/><hr>
+<h4>Payment Page</h4>
+<img src="https://imgur.com/RTJlR08.png"/><hr>
 <hr>
 I would say, thank you for reading this here. I hope you will find it helpful. I and my teammates completed this project with full enthusiasm, focus, and hard work. It may have some bugs, but we will try to fix them soon.
 
