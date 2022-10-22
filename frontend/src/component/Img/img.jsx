@@ -10,6 +10,7 @@ import {
   Input,
   ListItem,
   UnorderedList,
+  SimpleGrid
 } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 
@@ -66,14 +67,14 @@ export default function SplitScreen() {
           />
         </Flex>
       </Stack>
-      <Box
-        className="pricing_bottom-form"
-        display={"flex"}
+      <SimpleGrid columns={[1, 1,2]} 
+       
+      gap="130px"
         justifyContent={"space-around"}
-        gridGap={"10%"}
-        paddingTop={"10%"}
+       
+      ml="5%"
       >
-        <Box marginBottom="5rem" textAlign="left">
+        <Box  textAlign="left">
           <Box
             fontSize="2.25rem"
             fontFamily="geomanist-book sans-serif"
@@ -85,11 +86,11 @@ export default function SplitScreen() {
             Beautiful integrations. Intuitive interface. No unexpected fees
           </Box>
           <Box>
-            <Box margin={5} textAlign="left">
+            <Box  textAlign="left" display={"flex"}>
               <Input
                 placeholder="Work Email..."
                 size="md"
-                width={300}
+                width={500}
                 borderColor="gray.600"
                 p={5}
                 padding={6}
@@ -100,7 +101,7 @@ export default function SplitScreen() {
                 colorScheme="green"
                 size="lg"
                 width="10rem"
-                marginTop="-.4rem"
+               
               >
                 Try it free
               </Button>
@@ -131,7 +132,7 @@ export default function SplitScreen() {
             <ListItem>Spot burnout before it happens</ListItem>
           </UnorderedList>
         </Box>
-      </Box>
+      </SimpleGrid>
     </>
   );
 }

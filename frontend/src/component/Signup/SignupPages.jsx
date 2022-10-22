@@ -33,7 +33,7 @@ const SignupPages = () => {
       ...four,
     };
 
-    fetch("http://localhost:8000/signup", {
+    fetch("https://pure-reaches-65321.herokuapp.com/signup", {
       method: "POST",
       headers: {
         "content-type": "application/json",

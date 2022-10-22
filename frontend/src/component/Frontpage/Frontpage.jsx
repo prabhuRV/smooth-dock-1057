@@ -7,6 +7,7 @@ import { SiNotion, SiAsana, SiBasecamp, SiClickup } from "react-icons/si";
 import { FaJira, FaTrello } from "react-icons/fa";
 import { CgMonday } from "react-icons/cg";
 import SplitWithImage from "../carousel1/img";
+import { Box } from "@chakra-ui/react";
 const Frontpage = () => {
   return (
     <div className="container">
@@ -43,7 +44,7 @@ const Frontpage = () => {
           Track time and watch progress inside <br></br>the most popular apps
         </h1>
       </div>
-      <div className="logo">
+      <Box className="logo"  display={{ base: 'none', md: 'flex', lg: 'flex' }}>
         <SiAsana color="Magenta" />
         <div>Asana</div>
         <FaTrello color="blue" />
@@ -60,7 +61,7 @@ const Frontpage = () => {
         <div>Monday</div>
         <SiNotion />
         <div>Notion</div>
-      </div>
+      </Box>
     </div>
   );
 };

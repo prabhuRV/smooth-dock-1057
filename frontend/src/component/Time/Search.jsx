@@ -98,7 +98,7 @@ const handdleReport=()=>
  }
 
   return (
-    <Box  h="60px" mt={2}   border="1px solid" borderColor={"gray.300"} borderRadius="5px" m="auto" w="84%">
+    <Box  h="60px" mt={2}   border="1px solid" borderColor={"gray.300"} borderRadius="5px" m="auto" w="80%">
       <Flex h="60px">
         <Box>
           <Stack spacing={4}   width={"500px"}>
@@ -210,7 +210,7 @@ const handdleReport=()=>
             h="99%"
             w={"100%"}
             colorScheme="whatsapp"
-            ml="20px"
+            ml="30px"
           >
            Report Time
           </Button>

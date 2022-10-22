@@ -61,32 +61,32 @@ const ProjectCreation = () => {
  
   // Getting Todos
  const GetTodos=()=>{
-  axios.get("http://localhost:8000/todo").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todo").then((res)=>{
     setTodos(res.data)
   })
 
-  axios.get("http://localhost:8000/todoin").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todoin").then((res)=>{
     setInProgressTodos(res.data)
   })
 
-  axios.get("http://localhost:8000/todocomp").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todocomp").then((res)=>{
     setCompletedTodos(res.data)
   })
  }
 
   // Deleting Todos
   const HandleTodoDelete=(id)=>{
-   axios.delete(`http://localhost:8000/todo/delete/${id}`).then((r)=>{
+   axios.delete(`https://pure-reaches-65321.herokuapp.com/todo/delete/${id}`).then((r)=>{
     count++
    })
   }
   const HandleTodoInprogressDelete=(id)=>{
-    axios.delete(`http://localhost:8000/todoin/delete/${id}`).then((r)=>{
+    axios.delete(`https://pure-reaches-65321.herokuapp.com/todoin/delete/${id}`).then((r)=>{
      count++
     })
    }
    const HandleTodoCompDelete=(id)=>{
-    axios.delete(`http://localhost:8000/todocomp/delete/${id}`).then((r)=>{
+    axios.delete(`https://pure-reaches-65321.herokuapp.com/todocomp/delete/${id}`).then((r)=>{
      count++
     })
    }
@@ -95,7 +95,7 @@ const ProjectCreation = () => {
   const HandleaddTodo = () => {
     setinputTodo(!inputTodo);
     if(todo){
-      axios.post("http://localhost:8000/todo/create",todo).then((res)=>{
+      axios.post("https://pure-reaches-65321.herokuapp.com/todo/create",todo).then((res)=>{
         settodo("")
       })
     }
@@ -106,7 +106,7 @@ const ProjectCreation = () => {
     setInProgressinputTodo(!inProgressinputTodo);
     if (todo) {
       console.log("Inpro",todo)
-      axios.post("http://localhost:8000/todoin/create",todo).then((res)=>{
+      axios.post("https://pure-reaches-65321.herokuapp.com/todoin/create",todo).then((res)=>{
         settodo("")
       })
     }
@@ -116,7 +116,7 @@ const ProjectCreation = () => {
     setCompletedinputTodo(!completedinputTodo);
     if (todo) {
       console.log("Comp",todo)
-      axios.post("http://localhost:8000/todocomp/create",todo).then((res)=>{
+      axios.post("https://pure-reaches-65321.herokuapp.com/todocomp/create",todo).then((res)=>{
         settodo("")
       })
     }

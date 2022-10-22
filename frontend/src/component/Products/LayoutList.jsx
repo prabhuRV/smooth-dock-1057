@@ -15,15 +15,15 @@ const [InProgressTodos, setInProgressTodos] = useState([])
 const [CompletedTodos, setCompletedTodos] = useState([])
 
 const GetTodos=()=>{
-  axios.get("http://localhost:8000/todo").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todo").then((res)=>{
     setTodos(res.data)
   })
 
-  axios.get("http://localhost:8000/todoin").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todoin").then((res)=>{
     setInProgressTodos(res.data)
   })
 
-  axios.get("http://localhost:8000/todocomp").then((res)=>{
+  axios.get("https://pure-reaches-65321.herokuapp.com/todocomp").then((res)=>{
     setCompletedTodos(res.data)
   })
 }  
@@ -33,19 +33,19 @@ let countInprogress=InProgressTodos.length
 let countCompleted=CompletedTodos.length
 
 const HandleTodoDelete=(id)=>{
-  axios.delete(`http://localhost:8000/todo/delete/${id}`).then((r)=>{
+  axios.delete(`https://pure-reaches-65321.herokuapp.com/todo/delete/${id}`).then((r)=>{
    count++
   })
  }
 
  const HandleTodoInprogressDelete=(id)=>{
-  axios.delete(`http://localhost:8000/todoin/delete/${id}`).then((r)=>{
+  axios.delete(`https://pure-reaches-65321.herokuapp.com/todoin/delete/${id}`).then((r)=>{
    count++
   })
  }
 
  const HandleTodoCompDelete=(id)=>{
-  axios.delete(`http://localhost:8000/todocomp/delete/${id}`).then((r)=>{
+  axios.delete(`https://pure-reaches-65321.herokuapp.com/todocomp/delete/${id}`).then((r)=>{
    count++
   })
  }

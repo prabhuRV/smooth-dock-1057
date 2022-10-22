@@ -79,7 +79,7 @@ export const addintime= (payload)=>(dispatch)=>
 
     dispatch(addtimeClientRequest())
   return axios({
-    url: "http://localhost:8000/time/create",
+    url: "https://pure-reaches-65321.herokuapp.com/time/create",
     method: "post",
    
     data:payload,
@@ -98,7 +98,7 @@ export const addintime= (payload)=>(dispatch)=>
 
 export const gettime =  () => (dispatch) => {
   dispatch(gettimeClientRequest());
- return  axios({url:"http://localhost:8000/time/",
+ return  axios({url:"https://pure-reaches-65321.herokuapp.com/time/",
  method:"get",
 }).then((res) =>
 //console.log(res.data))
@@ -109,7 +109,7 @@ dispatch(gettimeClientSuccrss(res.data)))
 export const deletetime =  (_id) => (dispatch) => {
   dispatch(gettimeClientRequest());
   //console.log(id)
-  return axios({url:`http://localhost:8000/time/create/time/${_id}/delete`,
+  return axios({url:`https://pure-reaches-65321.herokuapp.com/time/create/time/${_id}/delete`,
     method:"delete",})
     .then((res) => dispatch(deletetimeClientSuccess(res.data)))
     .catch((err) => dispatch(deletetimeClientFaliure()));
@@ -118,7 +118,7 @@ export const deletetime =  (_id) => (dispatch) => {
 export const updatetime =  (_id,payload) => (dispatch) => {
   dispatch(gettimeClientRequest());
   //console.log(id)
-  return axios({url:`http://localhost:8000/time/create/time/${_id}/edit`,
+  return axios({url:`https://pure-reaches-65321.herokuapp.com/time/create/time/${_id}/edit`,
     method:"patch",
     data:payload
   })
@@ -133,7 +133,7 @@ export const addinClients= (payload)=>(dispatch)=>
 
     dispatch(addtimeClientRequest())
   return axios({
-    url: "http://localhost:8000/Clients/create",
+    url: "https://pure-reaches-65321.herokuapp.com/Clients/create",
     method: "post",
    
     data:payload,
@@ -152,7 +152,7 @@ export const addinClients= (payload)=>(dispatch)=>
 
 export const getClients =  () => (dispatch) => {
   dispatch(gettimeClientRequest());
- return  axios({url:"http://localhost:8000/Clients/",
+ return  axios({url:"https://pure-reaches-65321.herokuapp.com/Clients/",
  method:"get",
 }).then((res) =>
 //console.log(res.data))
@@ -163,7 +163,7 @@ dispatch(getClientSuccess(res.data)))
 export const deleteClients =  (_id) => (dispatch) => {
   dispatch(gettimeClientRequest());
   //console.log(id)
-  return axios({url:`http://localhost:8000/Clients/${_id}/delete`,
+  return axios({url:`https://pure-reaches-65321.herokuapp.com/Clients/${_id}/delete`,
     method:"delete",})
     .then((res) => dispatch(deletetimeClientSuccess(res.data)))
     .catch((err) => dispatch(deletetimeClientFaliure()));
@@ -172,7 +172,7 @@ export const deleteClients =  (_id) => (dispatch) => {
 export const updateClients =  (_id,payload) => (dispatch) => {
   dispatch(gettimeClientRequest());
   //console.log(id)
-  return axios({url:`http://localhost:8000/Clients/${_id}/edit`,
+  return axios({url:`https://pure-reaches-65321.herokuapp.com/Clients/${_id}/edit`,
     method:"patch",
     data:payload
   })

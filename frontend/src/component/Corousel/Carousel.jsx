@@ -1,9 +1,19 @@
 import React from "react";
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
+import { Box, IconButton, Image, useBreakpointValue } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./styles.css";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 // Settings for the slider
 const settings = {
@@ -38,70 +48,39 @@ const Test = () => {
   ];
 
   return (
-    <div>
-      <Box
-        position={"relative"}
-        height={"590px"}
-        width={"800px"}
-        marginLeft={"260px"}
-        overflow={"hidden"}
-        borderRadius={"5px"}
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Navigation]}
+        className="mySwiper"
       >
-        {/* CSS files for react-slick */}
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-        {/* Left Icon */}
-        <IconButton
-          aria-label="left-arrow"
-          borderRadius="full"
-          position="absolute"
-          left={side}
-          top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickPrev()}
-        >
-          <BiLeftArrowAlt />
-        </IconButton>
-        {/* Right Icon */}
-        <IconButton
-          aria-label="right-arrow"
-          color={"black"}
-          borderRadius="full"
-          position="absolute"
-          right={side}
-          top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickNext()}
-        >
-          <BiRightArrowAlt />
-        </IconButton>
-        {/* Slider */}
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {cards.map((url, index) => (
+        {cards.map((url, index) => (
+          <SwiperSlide>
             <Box
+           
+            m="auto"
+              boxShadow="md"
+              
+              rounded="md"
+              bg="white"
+              mb={5}
               key={index}
-              height={"2xl"}
-              position="relative"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-              backgroundImage={`url(${url})`}
-            />
-          ))}
-        </Slider>
-      </Box>
-    </div>
+            >
+              <Image textAlign="center" h={"400px"} w="600px" src={url} alt="" />
+            </Box>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 };
 
