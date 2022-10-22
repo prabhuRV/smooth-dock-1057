@@ -6,10 +6,12 @@ import {
   
   import thunk from "redux-thunk";
 import { TimeClientReducer } from "./TimeClient/timeclientReducer";
+import { Reducer } from "./Todo/reducer";
  
   const rootReduser = combineReducers({
    
-    TimeClientReducer:TimeClientReducer
+    TimeClientReducer:TimeClientReducer,
+    todos:Reducer
   });
   
   export const store = createStore(rootReduser, applyMiddleware(thunk));

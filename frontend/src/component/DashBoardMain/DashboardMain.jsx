@@ -7,6 +7,9 @@ import { Home } from '../HomeProjects/Home'
 import Setting from '../Payment/Setting'
 import OuterLayout from '../Products/OuterLayout'
 import Product from '../Products/Product'
+import { MainTodo } from '../Products/Todos/MainTodo'
+
+
 import SimpleSidebar from '../SideBar/SideBar'
 import { Time } from '../Time/Time'
 import "./dashboard.css"
@@ -150,7 +153,7 @@ navigate("/")
 
         </Box>
         <Box overflow="scroll" className='AAA' maxH="100vh" w="80%" border="1px solid" p="10px" borderColor="gray.300" ml="10px">
-        {time ? <Time/> : projects ? <Product/> : client ? <ClintsMainPage/> : setting ? <Setting/> : <Home/> }
+        {time ? <Time/> : projects ? <MainTodo /> : client ? <ClintsMainPage/> : setting ? <Setting/> : <Home/> }
         </Box>
     </Box>
   )
